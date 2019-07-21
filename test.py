@@ -21,7 +21,8 @@ def upload():
 
 @app.route('/downloadText')
 def download():
-    f = open('data.txt')
+    # f = open('data.txt')
+    f = open('test/floorplan/a_floorplan.txt')
     a = f.read()
     f.close()
     return a
