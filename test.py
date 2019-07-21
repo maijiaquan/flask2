@@ -46,6 +46,8 @@ def upload_file():
             f = request.files['file']
             f.save('a.jpg')
             os.system("echo \"Hello World\"")
+            os.system("python ../ano/FloorplanTransformation/pytorch/train.py --task=test_batch")
+
             return 'upload ok'
     else:
         return '''
