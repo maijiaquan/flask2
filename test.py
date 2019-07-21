@@ -1,5 +1,6 @@
 
 
+import os
 
 from flask import Flask
 from flask import request
@@ -44,6 +45,7 @@ def upload_file():
             print('get the file')
             f = request.files['file']
             f.save('a.jpg')
+            os.system("echo \"Hello World\"")
             return 'upload ok'
     else:
         return '''
